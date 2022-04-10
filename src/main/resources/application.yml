@@ -11,6 +11,10 @@ spring:
           uri: lb://USER-APPLICATION
           predicates:
             - Path=/api/**
+        - id: order-server
+          uri: lb://ORDER-SERVER
+          predicates:
+            - Path=/order/**
 
 management:
   endpoints:
